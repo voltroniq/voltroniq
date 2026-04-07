@@ -89,6 +89,12 @@ body {
     align-items: center;
 }
 
+.app-hero .mission-text {
+    font-size: 1.4rem; /* Slightly larger than the standard 1.15rem */
+    line-height: 1.6;
+    color: #ffffff;    /* Brighter white to command attention */
+}
+
 /* --- TYPOGRAPHY --- */
 h1 {
     font-size: clamp(2.5rem, 8vw, 4.5rem);
@@ -199,6 +205,71 @@ h1 {
     line-height: 1.6;
 }
 
+/* --- FOOTER STYLES --- */
+.main-footer {
+    padding: 6rem 10% 3rem 10%;
+    background: #050505; /* Slightly darker than main bg for depth */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+    opacity: 0.7;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+    opacity: 1;
+}
+
+.email-link {
+    text-decoration: none;
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-bottom: 1px dashed rgba(139, 92, 246, 0.3);
+    padding-bottom: 2px;
+    transition: 0.3s;
+}
+
+.email-link:hover {
+    border-bottom-color: var(--accent);
+}
+
+.footer-bottom {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    width: 100%;
+}
+
+.footer-bottom p {
+    color: #444;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 /* --- RESPONSIVENESS --- */
 @media (max-width: 768px) {
     .navbar {
@@ -215,5 +286,13 @@ h1 {
 
     .mission-text {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
