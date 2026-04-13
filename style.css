@@ -150,6 +150,28 @@ h1 {
     filter: brightness(1.1);
 }
 
+.secondary-cta {
+    margin-left: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.secondary-cta::after {
+    content: " →";
+    transition: transform 0.3s ease;
+}
+
+.secondary-cta:hover {
+    color: var(--accent);
+}
+
+.secondary-cta:hover::after {
+    transform: translateX(4px);
+}
+
 /* --- APP PAGE FEATURES --- */
 .container {
     max-width: 1200px;
